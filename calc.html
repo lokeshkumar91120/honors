@@ -1,33 +1,34 @@
-<html>
-    <body>
-        <script>
-        
-         let a=prompt('enter first number')
-         let b=prompt('enter second number')
-         let c=prompt('enter operator')
-         a=parseInt(a)
-         b=parseInt(b)
-        
-        switch(c){
-            case '+':
-                alert(a+b);
-                break
-            case '-':
-                alert(a-b);
-                break
-            case '*':
-                alert(a*b);
-                break
-            case '/':
-                alert(a/b);
-                break
-            case '%':
-                alert(a%b);
-                break
-                default:
-                    alert('not an operator')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        }
-        </script>
-    </body>
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+        <div>
+            <input type="number" id="num1" placeholder="Enter first number">
+        </div>
+        <div>
+            <input type="number" id="num2" placeholder="Enter second number">
+        </div>
+
+        <div class="operations">
+            <label><input type="radio" name="operation" value="+" checked> + </label>
+            <label><input type="radio" name="operation" value="-"> - </label>
+            <label><input type="radio" name="operation" value="*"> * </label>
+            <label><input type="radio" name="operation" value="/"> / </label>
+        </div>
+
+        <button onclick="calculate()">Result</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
